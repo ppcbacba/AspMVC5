@@ -13,13 +13,13 @@ namespace PartyInvites.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Please enter you email address")]
-        [RegularExpression(".+\\@.+\\.+",ErrorMessage = "Please enter a valid email address")]
+        [RegularExpression("^\\s*([A-Za-z0-9_-]+(\\.\\w+)*@(\\w+\\.)+\\w{2,5})\\s*$", ErrorMessage = "Please enter a valid email address")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter your phone number")]
         public string Phone { get; set; }
-
-        [Required(ErrorMessage = "Please specify wheter you'll attend")]
+    
+        [Required(ErrorMessage = "Please specify whatever you'll attend")]
         public bool? WillAttend { get; set; }
 
     }
